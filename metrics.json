@@ -1,0 +1,112 @@
+{
+  "rows": 32581,
+  "train_rows": 26064,
+  "test_rows": 6517,
+  "split": "stratified random 80/20; no temporal validation",
+  "seed": 42,
+  "test_default_prevalence": 0.21819855761853613,
+  "data_sha256": "ce3c6d2167717bf1627d1c0c81cbccd28323cd4aa7b96d542599366d5ff6aac8",
+  "missing_values": {
+    "person_age": 0,
+    "person_income": 0,
+    "person_home_ownership": 0,
+    "person_emp_length": 895,
+    "loan_intent": 0,
+    "loan_grade": 0,
+    "loan_amnt": 0,
+    "loan_int_rate": 3116,
+    "loan_status": 0,
+    "loan_percent_income": 0,
+    "cb_person_default_on_file": 0,
+    "cb_person_cred_hist_length": 0
+  },
+  "duplicate_rows_retained": 165,
+  "environment": {
+    "python": "3.12.14",
+    "pandas": "2.2.3",
+    "numpy": "2.3.5",
+    "scikit_learn": "1.8.0"
+  },
+  "models": [
+    {
+      "model": "LogisticRegression",
+      "roc_auc": 0.8853760270748879,
+      "pr_auc": 0.7521162187074167,
+      "brier_score": 0.12648279818911878,
+      "review_capacity": [
+        {
+          "review_fraction": 0.05,
+          "review_count": 326,
+          "defaults_in_queue": 299,
+          "total_defaults": 1422,
+          "default_capture": 0.21026722925457103,
+          "queue_default_rate": 0.9171779141104295
+        },
+        {
+          "review_fraction": 0.1,
+          "review_count": 652,
+          "defaults_in_queue": 562,
+          "total_defaults": 1422,
+          "default_capture": 0.3952180028129395,
+          "queue_default_rate": 0.8619631901840491
+        },
+        {
+          "review_fraction": 0.15,
+          "review_count": 978,
+          "defaults_in_queue": 781,
+          "total_defaults": 1422,
+          "default_capture": 0.5492264416315049,
+          "queue_default_rate": 0.7985685071574642
+        },
+        {
+          "review_fraction": 0.2,
+          "review_count": 1304,
+          "defaults_in_queue": 954,
+          "total_defaults": 1422,
+          "default_capture": 0.6708860759493671,
+          "queue_default_rate": 0.7315950920245399
+        }
+      ]
+    },
+    {
+      "model": "HistGradientBoosting",
+      "roc_auc": 0.9477585509634799,
+      "pr_auc": 0.902956709515394,
+      "brier_score": 0.05294716059867277,
+      "review_capacity": [
+        {
+          "review_fraction": 0.05,
+          "review_count": 326,
+          "defaults_in_queue": 326,
+          "total_defaults": 1422,
+          "default_capture": 0.22925457102672292,
+          "queue_default_rate": 1
+        },
+        {
+          "review_fraction": 0.1,
+          "review_count": 652,
+          "defaults_in_queue": 652,
+          "total_defaults": 1422,
+          "default_capture": 0.45850914205344584,
+          "queue_default_rate": 1
+        },
+        {
+          "review_fraction": 0.15,
+          "review_count": 978,
+          "defaults_in_queue": 976,
+          "total_defaults": 1422,
+          "default_capture": 0.6863572433192686,
+          "queue_default_rate": 0.9979550102249489
+        },
+        {
+          "review_fraction": 0.2,
+          "review_count": 1304,
+          "defaults_in_queue": 1113,
+          "total_defaults": 1422,
+          "default_capture": 0.7827004219409283,
+          "queue_default_rate": 0.8535276073619632
+        }
+      ]
+    }
+  ]
+}
